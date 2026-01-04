@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Watcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Мой Кошелёк</h1>
+            <div class="balance-card">
+                <h2>Баланс:</h2>
+                <div class="balance-value">0 ₽</div>
+            </div>
+        </header>
+         <select name="operation-type" id="operation">
+            <option value="income">Доход</option>
+            <option value="expense">Расход</option>
+         </select>
+        <section class="add-transaction">
+            <h3>Добавить операцию</h3>
+            <!-- Поля ввода, с которыми мы будем работать из JS -->
+            <input type="text" id="transaction-text" placeholder="Например: Продукты">
+            <input type="number" id="transaction-amount" placeholder="Сумма (например: 500)">
+            <button id="add-btn">Добавить</button>
+        </section>
+
+        <section class="history">
+            <h3>История</h3>
+            <ul id="history-list">
+                <!-- Сюда JS будет добавлять пункты -->
+                <li class="history-item">
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
